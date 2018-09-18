@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" ng-controller="homeController">
+  <a class="navbar-brand" ui-sref="view"> DAT </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" ng-class="{'active': currentMenu === 'userList'}">
+        <a class="nav-link" ui-sref="userList" ng-click="currentMenu = 'userList'">User List <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" ng-class="{'active': currentMenu === 'profile'}">
+        <a class="nav-link" ui-sref="profile" ng-click="currentMenu = 'profile'">My Profile</a>
+      </li>
+      <li visible-to-roles="ROLE_ADMIN,ROLE_MANAGER" class="nav-item" ng-class="{'active': currentMenu === 'entries'}">
+        <a class="nav-link" ui-sref="entries" ng-click="currentMenu = 'entries'">New User</a>
+      </li>
+     </ul>
+     <form class="mb-0">	
+		<input type="submit" ng-click="logout()" value="Logout" class="btn btn-danger" />		
+	</form>
+  </div>
+</nav>
+
+<div class="container" style="min-height:700px;">
+  <div class="col-md-12" ui-view></div>
+</div>

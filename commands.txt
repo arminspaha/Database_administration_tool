@@ -1,0 +1,5 @@
+For first app installation use following command: sudo npm install
+browserify command: sudo npm run build
+
+You must be anytime located into folder where you have pull your project.
+

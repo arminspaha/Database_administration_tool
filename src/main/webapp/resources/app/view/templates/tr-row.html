@@ -1,0 +1,11 @@
+<tr>
+<td visible-to-roles="ROLE_ADMIN,ROLE_MANAGER">
+<button visible-to-roles="ROLE_ADMIN,ROLE_MANAGER" type="button" class="btn btn-warning" ng-click="editUser(user);">Edit</button>
+<button visible-to-roles="ROLE_ADMIN" type="button" class="btn btn-warning" ng-click="deleteUser(user);">Delete</button>
+</td>
+<td>{{user.firstName}}</td>
+<td>{{user.lastName}}</td>
+<td>{{user.email}}</td>
+</tr>
+      
+      
